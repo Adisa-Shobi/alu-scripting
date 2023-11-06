@@ -41,5 +41,4 @@ def count_words(subreddit, word_list, fullname="", count=0, hash_table={}):
         count_words(subreddit, word_list, after, count, hash_table)
     else:
         {print('{}: {}'.format(key, value)) for
-         key, value in sorted(hash_table.items(), key=lambda i: (i[1], i[0]),
-                              reverse=True)}
+         key, value in sorted(hash_table.items(), key=lambda i: (-i[1], i[0]))}
