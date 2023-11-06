@@ -28,7 +28,7 @@ def count_words(subreddit, word_list, fullname="", count=0, hash_table={}):
     for title in new_packet:
         for word in word_list:
             word = word.lower()
-            if word in title.lower():
+            if word in title.lower().split(" "):
                 if (word in hash_table.keys()):
                     hash_table[word] += 1
                 else:
